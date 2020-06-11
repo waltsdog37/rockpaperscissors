@@ -1,26 +1,45 @@
-let message;
-let computerSelection = computerPlay();
-let playerSelection = prompt("Please choose rock, paper, or scissors: ").toLowerCase();
+function game() {
+  //Start the game, play 5 rounds and keep score
+  let playerScore = 0;
+  let computerScore = 0;
+
+  for (i = 0; i < 5; i++) {
+    let computerSelection = computerPlay();
+    let playerSelection = prompt("Please choose rock, paper, or scissors: ").toLowerCase();
+    
+    console.log(playRound(playerSelection, computerSelection));
+    console.log("You chose: " + playerSelection + " and the computer chose: " + computerSelection);
+    if (message === "You win!") {
+      playerScore++;
+    } else if (message === "Computer wins!") {
+      computerScore++;
+    }
+    console.log("SCORE - You: " + playerScore + ", Computer: " + computerScore);
+  }
+}
+
+
 
 function computerPlay() {
-    //Random generate rock, paper, scissors for the computer
+  //Random generate rock, paper, scissors for the computer
 
   let num = Math.floor(Math.random() * 4);
+  let computer;
 
-  if (num === 1){
-      comp = "rock";
-  } else if (num === 2){
-      comp = "paper";
+  if (num === 1) {
+    computer = "rock";
+  } else if (num === 2) {
+    computer = "paper";
   } else {
-      comp = "scissors";
+    computer = "scissors";
   }
-  return comp;
-  }
+  return computer;
+}
 
 
-function playRound() {
-    //compare player and computer, output winner and results
-    
+function playRound(playerSelection, computerSelection) {
+  //compare player and computer, output winner and results
+
   if (playerSelection === "rock") {
     if (computerSelection === "rock") {
       message = "It's a tie";
@@ -30,7 +49,7 @@ function playRound() {
       message = "You win!";
     }
     return message;
-}
+  }
   else if (playerSelection === "paper") {
     if (computerSelection === "rock") {
       message = "You win!";
@@ -40,7 +59,7 @@ function playRound() {
       message = "Computer wins!";
     }
     return message;
-}
+  }
   else if (playerSelection === "scissors") {
     if (computerSelection === "rock") {
       message = "Computer wins!";
@@ -50,11 +69,11 @@ function playRound() {
       message = "It's a tie!";
     }
     return message;
-}
-  else {
-      return message = "Incorrect input";
   }
+  else {
+    return message = "Incorrect input";
+  }
+
 }
 
-console.log(playRound(playerSelection, computerSelection));
-console.log("You chose: " + playerSelection + " and the computer chose: " + computerSelection);
+game();
