@@ -5,7 +5,7 @@ let computerScore = 0;
 function computerChoice() {
     let number = Math.floor(Math.random() * 3);
     let computer;
-    console.log(number);
+
     if (number === 0) {
         computer = "Rock";
     } else if (number === 1) {
@@ -13,11 +13,63 @@ function computerChoice() {
     } else if (number === 2) {
         computer = "Scissors";
     };
-    console.log(computer);
     return computer;
 };
 
 // get player selection from button click
-function playerChoice() {
-    
-}
+function game(element) {
+    let player = element.id;
+    let computer = computerChoice();
+
+    let youResult = document.getElementById("you-result");
+    youResult.textContent = "You chose " + player;
+
+    let computerResult = document.getElementById("computer-result");
+    computerResult.textContent = "Computer chose " + computer;
+
+    compare(player, computer);
+};
+
+// compare results from game fx and decide winner of round
+function compare(player, computer) {
+    let winner;
+    console.log("P: " + player);
+    console.log("C: " + computer);
+    if (player === computer) {
+        console.log("it's a tie");
+    } else if (player === "Rock") {
+            if (computer === "Paper") {
+                winner = "Computer";
+            } else {
+                winner = "Player";
+            };
+        } else if (player === "Paper") {
+            if (computer === "Scissors") {
+                winner = "Computer";
+            } else {
+                winner = "Player";
+            }
+        } else if (player === "Scissors") {
+            if (computer === "Rock") {
+                winner = "Computer";
+            } else {
+                winner = "Player";
+            }}
+        results(winner);
+    };
+
+// increment scores and decide game winner once 5 points reached 
+function results(winner) {
+    if (winner === "Player") {
+        playerScore++;
+        document.getElementById("player").textContent = playerScore;
+        if (playerScore === 5) {
+            document.getElementById("game-over").textContent = "Congratulations.  You win!!!";
+        };
+    } else if (winner === "Computer") {
+        computerScore++;
+        document.getElementById("computer").textContent = computerScore;
+        if (computerScore === 5) {
+            document.getElementById("game-over").textContent = "Sorry, but you lose!!!"; 
+        }};
+    };

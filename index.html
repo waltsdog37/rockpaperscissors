@@ -13,13 +13,22 @@
 </head>
 
 <body>
-    Let's Rock!
 
     <div class="button-container">
-        <button id="Rock" onclick=computerChoice()>Rock</button>
-        <button id="Paper" onclick=computerChoice()>Paper</button>
-        <button id="Scissors" onclick=computerChoice()>Scissors</button>
+        <button id="Rock" onclick=game(this)>Rock</button>
+        <button id="Paper" onclick=game(this)>Paper</button>
+        <button id="Scissors" onclick=game(this)>Scissors</button>
     </div>
+
+    <div id="you-result"></div>
+    <div id="computer-result"></div>
+
+    <div class="score-container">
+        <p id="player-score">Player: <span id="player">0</span></p>
+        <p id="computer-score">Computer: <span id="computer">0</span></p>
+    </div>
+
+    <div id="game-over"></div>
 
 </body>
 
