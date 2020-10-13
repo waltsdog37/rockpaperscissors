@@ -38,27 +38,28 @@ function compare(player, computer) {
     if (player === computer) {
         console.log("it's a tie");
     } else if (player === "Rock") {
-            if (computer === "Paper") {
-                winner = "Computer";
-            } else {
-                winner = "Player";
-            };
-        } else if (player === "Paper") {
-            if (computer === "Scissors") {
-                winner = "Computer";
-            } else {
-                winner = "Player";
-            }
-        } else if (player === "Scissors") {
-            if (computer === "Rock") {
-                winner = "Computer";
-            } else {
-                winner = "Player";
-            }}
-        results(winner);
-    };
+        if (computer === "Paper") {
+            winner = "Computer";
+        } else {
+            winner = "Player";
+        };
+    } else if (player === "Paper") {
+        if (computer === "Scissors") {
+            winner = "Computer";
+        } else {
+            winner = "Player";
+        }
+    } else if (player === "Scissors") {
+        if (computer === "Rock") {
+            winner = "Computer";
+        } else {
+            winner = "Player";
+        }
+    }
+    results(winner);
+};
 
-// increment scores and decide game winner once 5 points reached 
+// increment scores and trigger game end after winner gets 5 points
 function results(winner) {
     if (winner === "Player") {
         playerScore++;
@@ -70,6 +71,12 @@ function results(winner) {
         computerScore++;
         document.getElementById("computer").textContent = computerScore;
         if (computerScore === 5) {
-            document.getElementById("game-over").textContent = "Sorry, but you lose!!!"; 
-        }};
+            document.getElementById("game-over").textContent = "Sorry, but you lose!!!";
+        }
     };
+};
+
+// click button reloads index.html to play again
+function reset() {
+    window.location = "index.html";
+}

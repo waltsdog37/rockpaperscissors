@@ -5,6 +5,8 @@ body {
     align-items: center;
 }
 
-.button-container {
-
+.rps-button {
+    width: 200px;
+    margin: 25px;
+    outline: none;
 }

@@ -2,22 +2,21 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>Rock Paper Scissors</title>
-
     <script src="scripts.js"></script>
 
+    <title>Rock Paper Scissors</title>
 
 </head>
 
 <body>
 
     <div class="button-container">
-        <button id="Rock" onclick=game(this)>Rock</button>
-        <button id="Paper" onclick=game(this)>Paper</button>
-        <button id="Scissors" onclick=game(this)>Scissors</button>
+        <input class="rps-button" id="Rock" type="image" src="/images/rock.png" onclick=game(this)></button>
+        <input class="rps-button" id="Paper" type="image" src="/images/paper.png" onclick=game(this)></button>
+        <input class="rps-button" id="Scissors" type="image" src="/images/scissors.png" onclick=game(this)></button>
     </div>
 
     <div id="you-result"></div>
