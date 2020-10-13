@@ -1,6 +1,7 @@
 let playerScore = 0;
 let computerScore = 0;
 
+
 // get computer selection randomly
 function computerChoice() {
     let number = Math.floor(Math.random() * 3);
@@ -65,13 +66,18 @@ function results(winner) {
         playerScore++;
         document.getElementById("player").textContent = playerScore;
         if (playerScore === 5) {
+            document.getElementById("all").style.display = "none";
             document.getElementById("game-over").textContent = "Congratulations.  You win!!!";
+            document.getElementById("reset").style.display = "block";
+
         };
     } else if (winner === "Computer") {
         computerScore++;
         document.getElementById("computer").textContent = computerScore;
         if (computerScore === 5) {
+            document.getElementById("all").style.display = "none";
             document.getElementById("game-over").textContent = "Sorry, but you lose!!!";
+            document.getElementById("reset").style.display = "block";
         }
     };
 };

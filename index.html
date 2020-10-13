@@ -12,7 +12,7 @@
 </head>
 
 <body>
-
+<div id="all">
     <div class="button-container">
         <input class="rps-button" id="Rock" type="image" src="/images/rock.png" onclick=game(this)></button>
         <input class="rps-button" id="Paper" type="image" src="/images/paper.png" onclick=game(this)></button>
@@ -27,7 +27,11 @@
         <p id="computer-score">Computer: <span id="computer">0</span></p>
     </div>
 
-    <div id="game-over"></div>
+</div>
+
+<div id="game-over"></div>
+
+<button id="reset" onclick=reset()>Play Again?</button>
 
 </body>
 

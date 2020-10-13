@@ -10,3 +10,7 @@ body {
     margin: 25px;
     outline: none;
 }
+
+#reset {
+    display: none;
+}
