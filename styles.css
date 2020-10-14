@@ -3,12 +3,34 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgb(83, 140, 145);
+}
+
+.title {
+    font-size: 100px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 4px 5px blue;
 }
 
 .rps-button {
     width: 200px;
     margin: 25px;
     outline: none;
+}
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.results-container {
+    height: 80px;
+    margin: auto;
+}
+
+.score-container {
+    margin: auto;
 }
 
 #reset {

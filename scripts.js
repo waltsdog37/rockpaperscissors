@@ -66,7 +66,7 @@ function results(winner) {
         playerScore++;
         document.getElementById("player").textContent = playerScore;
         if (playerScore === 5) {
-            document.getElementById("all").style.display = "none";
+            document.getElementById("game-container").style.display = "none";
             document.getElementById("game-over").textContent = "Congratulations.  You win!!!";
             document.getElementById("reset").style.display = "block";
 
@@ -75,7 +75,7 @@ function results(winner) {
         computerScore++;
         document.getElementById("computer").textContent = computerScore;
         if (computerScore === 5) {
-            document.getElementById("all").style.display = "none";
+            document.getElementById("game-container").style.display = "none";
             document.getElementById("game-over").textContent = "Sorry, but you lose!!!";
             document.getElementById("reset").style.display = "block";
         }

@@ -12,26 +12,29 @@
 </head>
 
 <body>
-<div id="all">
-    <div class="button-container">
-        <input class="rps-button" id="Rock" type="image" src="/images/rock.png" onclick=game(this)></button>
-        <input class="rps-button" id="Paper" type="image" src="/images/paper.png" onclick=game(this)></button>
-        <input class="rps-button" id="Scissors" type="image" src="/images/scissors.png" onclick=game(this)></button>
+    <div class="title">Rock Paper Scissors</div>
+    <div id="game-container">
+        <div class="button-container">
+            <input class="rps-button" id="Rock" type="image" src="/images/rock.png" onclick=game(this)></button>
+            <input class="rps-button" id="Paper" type="image" src="/images/paper.png" onclick=game(this)></button>
+            <input class="rps-button" id="Scissors" type="image" src="/images/scissors.png" onclick=game(this)></button>
+        </div>
+
+        <div class="results-container">
+            <div id="you-result"></div>
+            <div id="computer-result"></div>
+        </div>
+
+        <div class="score-container">
+            <p id="player-score">Player: <span id="player">0</span></p>
+            <p id="computer-score">Computer: <span id="computer">0</span></p>
+        </div>
+
     </div>
 
-    <div id="you-result"></div>
-    <div id="computer-result"></div>
+    <div id="game-over"></div>
 
-    <div class="score-container">
-        <p id="player-score">Player: <span id="player">0</span></p>
-        <p id="computer-score">Computer: <span id="computer">0</span></p>
-    </div>
-
-</div>
-
-<div id="game-over"></div>
-
-<button id="reset" onclick=reset()>Play Again?</button>
+    <button id="reset" onclick=reset()>Play Again?</button>
 
 </body>
 
