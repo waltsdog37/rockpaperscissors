@@ -17,6 +17,11 @@ body {
     width: 200px;
     margin: 25px;
     outline: none;
+    opacity: 50%;
+}
+
+.rps-button:hover {
+    opacity: 100%;
 }
 
 #game-container {
@@ -33,6 +38,24 @@ body {
     margin: auto;
 }
 
+.end-game {
+    margin-top: 100px;
+    font-size: 60px;
+    
+}
+
 #reset {
     display: none;
+    margin: 40px auto;
+}
+
+button {
+    padding: 10px;
+    font-size: 20px;
+    background-color: rgb(202, 146, 181);
+}
+
+button:hover {
+    background-color: black;
+    color: white;
 }
